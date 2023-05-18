@@ -1,0 +1,223 @@
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: #f8e0dd;
+  height: 100vh;
+  display: grid;
+  
+  place-content: center;
+}
+
+.flex {
+  display: flex;
+
+}
+
+.card{
+  flex-direction: column;
+  gap: 96px;
+
+  padding: 24px 56px;
+
+  border-radius: 40px;
+
+  background-color: white;
+
+  max-width: 795px;
+
+}
+
+
+.card-drag {
+  width: 168px;
+  height: 18px;
+
+  background-color: #E5D8EA;
+  margin-inline: auto; 
+  border-radius: 999px; /* pill*/
+
+}
+
+
+/*card-header*/
+
+.card-header h1 {
+  color:  #372038;
+  font-size: 40px;
+  line-height: 48px;
+  
+}
+
+.card-header h1 span {
+  color: #864293;
+  
+}
+  
+.card-header p {
+  
+  color:  #372038;
+  font-size: 25px;
+  line-height: 32px;
+  
+}
+
+
+/* card-body */
+.card-body {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body.left {
+  align-items: center;
+}
+
+/* driver */
+.driver {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1;
+}
+
+.driver-avatar img {
+  width: 138px;
+  height: 138px;
+
+}
+
+.driver-stars {
+  color: #FBF8FC;
+  background-color: #372038;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 25px, 48px;
+
+  gap: 10px;
+  width: fit-content;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+
+  margin-top: -30px;
+
+}
+
+.driver-name {
+  font-weight:700;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #372038;
+  margin-top: 6px;
+
+}
+
+/* car */
+.car-image {
+  margin-left: -50px;
+}
+
+.car-plate {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+
+  color: #372D38;
+}
+
+.car-model {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #372D38;
+
+}
+
+/*card-footer*/
+.card-footer {
+  gap: 32px;
+
+  align-items: center;
+}
+
+.input-wrapper {
+  background-color:#F5EDF7 ;
+  border-radius: 24px;
+
+  height: 64px;
+
+  flex: 3;
+  align-items: center;
+
+  padding: 0 32px;
+}
+
+.input-wrapper label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin:-1px;
+  overflow: hidden;
+
+  clip:rect(0,0,0,0);
+  border-width:0;
+  white-space:nowrap;
+
+}
+
+.input-wrapper input {
+  width: 100%;
+
+  border: 0;
+  background-color: transparent;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #372D38;
+} 
+
+.input-wrapper input:focus {
+  outline: 0;
+}
+
+.input-wrapper:focus-within {
+  outline: 3px solid black;
+}
+
+.icons {
+  font-size: 36px;
+  display: flex;
+  gap: 1rem;
+  transition: all ease 0.3s;
+}
+  
+
+.driver:hover,
+.imgs:hover,
+.car-body:hover,
+.icons:hover {
+  cursor: pointer;
+  filter: opacity(0.8);
+  transform: scale(1.02) rotate(-1deg);
+  transition: all ease 0.3s;
+}
+
